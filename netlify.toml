@@ -1,6 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "dist/tu-nombre-de-proyecto/browser"
+  publish = "dist/portfolio-app/browser"
 
 [build.environment]
   NODE_VERSION = "22"
