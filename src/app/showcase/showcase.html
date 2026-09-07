@@ -1,0 +1,18 @@
+<section class="container-2xl">
+  <div class="row p-3">
+    @switch (this.section()) {
+      @case ('skills') {
+        <app-skills></app-skills>
+      }
+      @case ('about me') {
+        <app-about-me></app-about-me>
+      }
+      @case ('experience') {
+        <app-experience></app-experience>
+      }
+      @default {
+        <app-about-me></app-about-me>
+      }
+    }
+  </div>
+</section>

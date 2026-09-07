@@ -1,0 +1,14 @@
+<section class="container-2xl">
+  <ul class="row justify-content-evenly md:justify-content-around">
+    @for (item of sections; track item.id; let idx = $index) {
+      @if (item.language == this.language) {
+        <li
+          (click)="handleClick(item.sectionName)"
+          class="col-4 text-xl md:text-3xl text-center p-2 md:p-3"
+        >
+          {{ item.sectionName }}
+        </li>
+      }
+    }
+  </ul>
+</section>
