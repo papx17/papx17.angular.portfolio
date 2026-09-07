@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 interface Skill {
   name: string;
   iconClass?: string; // Para Devicon
-  iconUrl?: string;   // Para CDN de SimpleIcons
+  iconUrl?: string; // Para CDN de SimpleIcons
 }
 
 @Component({
@@ -20,6 +20,12 @@ export class Skills {
     { name: 'Java', iconUrl: 'https://cdn.simpleicons.org/openjdk' },
     { name: 'Spring Boot', iconUrl: 'https://cdn.simpleicons.org/springboot' },
     { name: 'PostgreSQL', iconUrl: 'https://cdn.simpleicons.org/postgresql' },
-    { name: 'Tailwind CSS', iconUrl: 'https://cdn.simpleicons.org/tailwindcss' }
+    { name: 'Tailwind CSS', iconUrl: 'https://cdn.simpleicons.org/tailwindcss' },
+    { name: 'Python', iconUrl: 'https://cdn.simpleicons.org/python' },
+    { name: 'Django', iconUrl: 'https://cdn.simpleicons.org/django' },
+    { name: 'FastAPI', iconUrl: 'https://cdn.simpleicons.org/fastapi' },
+    { name: 'MySql', iconUrl: 'https://cdn.simpleicons.org/mysql' },
+    { name: 'Javascript', iconUrl: 'https://cdn.simpleicons.org/javascript' },
+    { name: 'typescript', iconUrl: 'https://cdn.simpleicons.org/typescript' },
   ];
 }

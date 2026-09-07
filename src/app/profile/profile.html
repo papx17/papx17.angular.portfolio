@@ -7,9 +7,15 @@
       <h5 class="text-xl md:text-2xl">Desarrollador FullStack</h5>
       <nav class="nav navig justify-content-center">
         <ul class="row justify-content-around p-3">
-          <li class="col-4 text-2xl md:text-4xl"><i class="fa fa-linkedin"></i></li>
-          <li class="col-4 text-2xl md:text-4xl"><i class="fa-regular fa-envelope"></i></li>
-          <li class="col-4 text-2xl md:text-4xl"><i class="fa fa-whatsapp"></i></li>
+          <li class="col-4 text-2xl md:text-4xl" (click)="openWindow('linkedin')">
+            <i class="fa fa-linkedin"></i>
+          </li>
+          <li class="col-4 text-2xl md:text-4xl" (click)="openWindow('mail')">
+            <i class="fa-regular fa-envelope"></i>
+          </li>
+          <li class="col-4 text-2xl md:text-4xl" (click)="openWindow('whatsapp')">
+            <i class="fa fa-whatsapp"></i>
+          </li>
         </ul>
       </nav>
     </div>

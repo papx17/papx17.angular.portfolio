@@ -1,13 +1,24 @@
-<section class="p-4">
-  <h2 class="text-2xl font-bold mb-4">Skills</h2>
+<section class="container p-4">
+  <h2 class="fw-bold mb-4 text-center">Skills</h2>
 
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  <div class="d-flex flex-wrap justify-content-center gap-3">
     @for (skill of skills; track skill.name) {
       <div
-        class="flex flex-col items-center justify-center p-4 border rounded-lg shadow-sm hover:shadow-md transition"
+        class="card p-3 border rounded shadow-sm text-center d-flex flex-column align-items-center justify-content-between"
+        style="width: 140px; height: 160px"
       >
-        <img [src]="skill.iconUrl" [alt]="skill.name" class="w-12 h-12 mb-2" loading="lazy" />
-        <span class="font-medium text-sm">{{ skill.name }}</span>
+        <!-- Contenedor del icono con altura fija -->
+        <div class="d-flex align-items-center justify-content-center w-100" style="height: 60px">
+          <img
+            [src]="skill.iconUrl"
+            [alt]="skill.name"
+            style="max-height: 48px; max-width: 48px; object-fit: contain"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Nombre centrado al final -->
+        <span class="fw-medium small lh-sm mt-auto">{{ skill.name }}</span>
       </div>
     }
   </div>
