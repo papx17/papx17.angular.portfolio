@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faFacebook, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faLinkedin, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons';
 @Component({
   imports: [],
   selector: 'profile-c',
@@ -10,6 +10,7 @@ export class Profile {
   faFacebook = faFacebook;
   faLinkedin = faLinkedin;
   faGithub = faGithub;
+  faDiscord = faDiscord;
   email = 'jmadev17@gmail.com';
   readonly subject = encodeURIComponent('Contacto desde el Portafolio');
   readonly body = encodeURIComponent(
@@ -29,6 +30,9 @@ export class Profile {
         break;
       case 'whatsapp':
         window.open('https://wa.link/fhigj4', 'blank');
+        break;
+      case 'discord':
+        window.open('https://discord.com/users/721210583411851346');
         break;
     }
   }

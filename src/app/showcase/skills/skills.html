@@ -1,24 +1,49 @@
-<section class="container p-4">
-  <h2 class="fw-bold mb-4 text-center">Skills</h2>
+<section class="container mx-auto p-4">
+  <h2 class="text-2xl font-bold mb-6 text-center text-slate-800">Skills</h2>
 
-  <div class="d-flex flex-wrap justify-content-center gap-3">
+  <div class="flex flex-wrap justify-center gap-3" id="skillContainer">
     @for (skill of skills; track skill.name) {
       <div
-        class="card p-3 border rounded shadow-sm text-center d-flex flex-column align-items-center justify-content-between"
-        style="width: 140px; height: 160px"
+        class="w-[140px] h-[180px] p-3 bg-white border border-slate-200 rounded-xl shadow-sm flex flex-col items-center justify-between text-center transition-all duration-200 ease-in-out hover:-translate-y-1 hover:shadow-md"
       >
-        <!-- Contenedor del icono con altura fija -->
-        <div class="d-flex align-items-center justify-content-center w-100" style="height: 60px">
+        <!-- Icono centrado -->
+        <div class="w-full h-[50px] flex items-center justify-center">
           <img
             [src]="skill.iconUrl"
             [alt]="skill.name"
-            style="max-height: 48px; max-width: 48px; object-fit: contain"
+            class="max-h-[44px] max-w-[44px] object-contain"
             loading="lazy"
           />
         </div>
 
-        <!-- Nombre centrado al final -->
-        <span class="fw-medium small lh-sm mt-auto">{{ skill.name }}</span>
+        <!-- Nombre y Porcentaje -->
+        <div class="w-full my-1">
+          <span class="block text-xs font-semibold text-slate-700 truncate">{{ skill.name }}</span>
+          @if (skill.level) {
+            <span class="block text-[11px] text-slate-500 mt-0.5">{{ skill.level }}%</span>
+          }
+        </div>
+
+        <!-- Barra de progreso con Tailwind -->
+        @if (skill.level) {
+          <div
+            class="w-full px-1 mt-auto"
+            role="progressbar"
+            [attr.aria-valuenow]="skill.level"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            [attr.aria-label]="'Dominio de ' + skill.name"
+          >
+            <!-- Contenedor del fondo de la barra -->
+            <div class="w-full h-1.5 bg-slate-200 rounded-full overflow-hidden">
+              <!-- Relleno dinámico -->
+              <div
+                class="h-full bg-blue-600 rounded-full transition-all duration-700 ease-out"
+                [style.width.%]="skill.level"
+              ></div>
+            </div>
+          </div>
+        }
       </div>
     }
   </div>

@@ -1,3 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+:root {
+  --background-btn: #4f4f4f93;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-pointer * {
+  transition:
+    color 0.5s,
+    background 0.5s;
+  padding: 5px;
+}
+
+.cursor-pointer .fa-whatsapp {
+  &:hover {
+    color: rgba(6, 224, 53, 0.753);
+    background: var(--background-btn);
+  }
+}
+
+.cursor-pointer .fa-discord {
+  &:hover {
+    color: rgba(21, 6, 224, 0.664);
+    background: var(--background-btn);
+  }
+}
+
+.cursor-pointer .fa-envelope {
+  &:hover {
+    color: rgba(224, 13, 6, 0.753);
+    background: var(--background-btn);
+  }
+}
+
+.cursor-pointer .fa-linkedin {
+  &:hover {
+    color: rgba(6, 108, 224, 0.753);
+    background: var(--background-btn);
+  }
+}
